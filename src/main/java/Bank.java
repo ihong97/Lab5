@@ -8,12 +8,35 @@
  * @see <a href="https://cs125.cs.illinois.edu/lab/8/">Lab 8 Description</a>
  */
 public class Bank {
+    /**
+     *
+     */
+    private String bankName;
 
-    public String bankName;
-
+    /**
+     *
+     */
     public Bank() {
-        bankName = "Illini Bank";
+        this.bankName = "Illini Bank";
     }
+
+
+    /**
+     *
+     * @return
+     */
+    public String getBankName() {
+        return bankName;
+    }
+
+    /**
+     *
+     * @param bankName
+     */
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
 
     /**
      * Withdraw money from an account.
@@ -29,6 +52,11 @@ public class Bank {
         /*
          * Implement this function
          */
+        if (bankAccount.getAccountBalance() >= amount) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -45,6 +73,7 @@ public class Bank {
         /*
          * Implement this function
          */
+
     }
 
     /**
